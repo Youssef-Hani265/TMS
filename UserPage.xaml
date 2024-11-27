@@ -1,0 +1,23 @@
+﻿<Window x:Class="TaskApp.UserPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskApp"
+        mc:Ignorable="d"
+        Title="UserPage" Height="450" Width="800">
+    <Grid>
+        <Label Content="Employee" FontSize="30" HorizontalAlignment="Center" Margin="0,26,0,0" VerticalAlignment="Top"/>
+        <DataGrid x:Name="pindingGrid"  Margin="0,81,0,217" SelectionChanged="pindingGrid_SelectionChanged"/>
+        <DataGrid x:Name="completedGrid"  Margin="0,298,0,0"/>
+        <TextBox x:Name="empidtxt" HorizontalAlignment="Left" Margin="141,252,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="137" Height="25"/>
+        <Label Content="Task ID" HorizontalAlignment="Left" Margin="141,226,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comp" HorizontalAlignment="Center" Margin="0,252,0,0" VerticalAlignment="Top" Width="120" Height="25">
+            <ComboBoxItem Content="pending"/>
+            <ComboBoxItem Content="in progress"/>
+            <ComboBoxItem Content="completed"/>
+        </ComboBox>
+        <Label Content="Status" HorizontalAlignment="Left" Margin="340,226,0,0" VerticalAlignment="Top"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="542,250,0,0" VerticalAlignment="Top" Height="27" Width="64" Click="savebtn_Click"/>
+    </Grid>
+</Window>
